@@ -37,11 +37,11 @@ export default defineConfig({
     },
 
     {
-      path: '/',
+      path: '/click',
       component: '../layouts/BlankLayout',
       routes: [
         {
-          path: '/',
+          path: '/click',
           name: 'click-innovacion',
           icon: 'smile',
           component: './Initial-clikpage',
@@ -58,7 +58,7 @@ export default defineConfig({
           authority: ['admin', 'user'],
           routes: [
             {
-              path: '/Initial',
+              path: '/welcome',
               redirect: '/welcome',
             },
              

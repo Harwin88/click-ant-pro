@@ -70,7 +70,8 @@ class Intercambio extends React.Component {
   }
  
   componentDidMount() {
-    const url = "http://localhost:3000/api/v1/intercambios/index";
+   // "http://localhost:3000/api/v1/intercambios/index";
+    const url = "https://estrategicamyp.com/index.php?rest_route=/wp/v2/product";
     fetch(url)
       .then(response => {
         if (response.ok) {
@@ -88,15 +89,15 @@ class Intercambio extends React.Component {
       <div key={index} className="col-md-6 col-lg-4">
         <div className="card mb-4">
             <img
-            src={intercambio.imagen}
+            src={intercambio.title.renderd}
             className="card-img-top"
-            alt={`${intercambio.name} image`}
+            alt={`${intercambio.title.renderd} image`}
           />
 
           <div className="card-body">
-            <h5 className="card-title">{intercambio.name}</h5>
+            <h5 className="card-title">{intercambio.title.renderd}</h5>
             <Link to={`/intercambios/${intercambio.id}`} className="btn custom-button">
-                       $25000 Pague a qui.
+                       $25000 Pague a qui.{intercambio.title.rendered}
             </Link>
             
           </div>
